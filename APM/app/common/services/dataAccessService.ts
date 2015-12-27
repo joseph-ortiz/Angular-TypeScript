@@ -1,5 +1,6 @@
 module app.common {
     interface IDataAccessService {
+        getProductResource(): ng.resource.IResourceClass<IProductResource>;
     }
     
     interface IProductResource
@@ -14,8 +15,11 @@ module app.common {
                 
             }
             
-            getProductResrouce(): ng.resource.IResourceClass<IProductResource> {
+            getProductResource(): ng.resource.IResourceClass<IProductResource> {
                 return this.$resource("/api/products/productId");
             }
-        }
+    }
+    angular
+        .module("common.services")
+        .service("dataAccessService", DataAccessService);
 }
