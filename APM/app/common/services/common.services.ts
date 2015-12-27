@@ -1,3 +1,3 @@
 module app.common {
-    angular.module("commons.services", ["ngResource"]);
+    angular.module("common.services", ["ngResource"]);
 }
