@@ -16,7 +16,7 @@ module app.common {
             }
             
             getProductResource(): ng.resource.IResourceClass<IProductResource> {
-                return this.$resource("/api/products/productId");
+                return this.$resource("/api/products/:productId");
             }
     }
     angular
